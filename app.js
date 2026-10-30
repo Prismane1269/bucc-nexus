@@ -37,14 +37,14 @@
     });
   }
 
-  // 3. Live 48-Hour Sprint Countdown Timer
+  // 3. Live 72-Hour Registration Deadline Countdown Timer
   const cdHours = document.getElementById('cd-hours');
   const cdMins = document.getElementById('cd-mins');
   const cdSecs = document.getElementById('cd-secs');
 
   if (cdHours && cdMins && cdSecs) {
-    // 48 hours simulated countdown from page load
-    let totalSeconds = 48 * 3600;
+    // 72 hours registration deadline countdown
+    let totalSeconds = 72 * 3600;
 
     function updateCountdown() {
       if (totalSeconds > 0) {

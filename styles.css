@@ -488,6 +488,64 @@ img {
   padding: 16px 20px;
 }
 
+/* Coloured Big Font Registration Deadline */
+.deadline-card {
+  border-color: rgba(255, 107, 53, 0.45);
+  box-shadow: 0 0 30px rgba(255, 107, 53, 0.18), inset 0 0 20px rgba(255, 107, 53, 0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+.deadline-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.deadline-pulse {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--accent-orange);
+  box-shadow: 0 0 10px var(--accent-orange);
+  animation: pulseDot 1.6s infinite;
+}
+
+.deadline-label {
+  color: var(--accent-orange);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  margin-bottom: 0;
+}
+
+.deadline-timer {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.deadline-time {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 3.8vw, 2.8rem);
+  font-weight: 800;
+  line-height: 1;
+  background: linear-gradient(135deg, #FFA07A 0%, #FF6B35 55%, #FF3D00 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 16px rgba(255, 107, 53, 0.45));
+  letter-spacing: -0.02em;
+}
+
+.deadline-sep {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--accent-cyan);
+  text-shadow: 0 0 10px rgba(110, 231, 255, 0.5);
+  margin: 0 2px;
+}
+
 .meta-label {
   display: block;
   font-family: var(--font-mono);
@@ -517,9 +575,11 @@ img {
 
 .time-unit {
   font-family: var(--font-mono);
-  font-size: 0.55rem;
-  color: var(--text-muted);
-  letter-spacing: 0.05em;
+  font-size: 0.58rem;
+  font-weight: 700;
+  color: #FFA578;
+  letter-spacing: 0.08em;
+  margin-top: 2px;
 }
 
 .time-sep {
