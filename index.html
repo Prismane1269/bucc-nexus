@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BUCC NEXUS — BUILD WHAT'S NEXT. | 48-Hour Innovation Hackathon</title>
+  <meta name="description" content="BUCC NEXUS is a proposed 48-hour student innovation hackathon by BRAC University Computer Club uniting developers, designers, and engineers to build the future.">
+  <link rel="icon" type="image/svg+xml" href="assets/bucc-logo.svg">
+
+  <!-- Google Fonts: Space Grotesk, Sora & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Sora:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Three.js (CDN) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Fullscreen 3D & Video Composite Background -->
+  <div id="canvas-container" aria-hidden="true">
+    <video id="bg-video-primary" class="bg-video-stream active" autoplay loop muted playsinline preload="auto">
+      <source src="assets/videos/hero-energy-trails.mp4" type="video/mp4">
+    </video>
+    <video id="bg-video-secondary" class="bg-video-stream" loop muted playsinline preload="auto">
+      <source src="assets/videos/network-nodes.mp4" type="video/mp4">
+    </video>
+    <canvas id="webgl-canvas"></canvas>
+    <div class="canvas-vignette"></div>
+    <div class="canvas-grid-overlay"></div>
+    <div class="video-tint"></div>
+  </div>
+
+  <!-- SECTION 1: HEADER & NAVIGATION -->
+  <header class="site-header" id="site-header">
+    <div class="header-inner container">
+      <a href="#hero" class="brand-group" aria-label="BUCC NEXUS Home">
+        <div class="brand-logos">
+          <img src="assets/bucc-logo.svg" alt="BUCC Crest Logo" class="brand-bucc-logo" width="36" height="36">
+          <div class="brand-divider"></div>
+          <img src="assets/brac-university-logo.png" alt="BRAC University" class="brand-brac-logo" width="32" height="32">
+        </div>
+        <div class="brand-text">
+          <span class="brand-title">BUCC NEXUS</span>
+          <span class="brand-sub">BRAC UNIVERSITY</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#tracks" class="nav-link">Tracks</a></li>
+          <li><a href="#schedule" class="nav-link">Timeline</a></li>
+          <li><a href="#experiences" class="nav-link">Experience</a></li>
+          <li><a href="#prizes" class="nav-link">Prizes</a></li>
+          <li><a href="#faq" class="nav-link">FAQ</a></li>
+        </ul>
+      </nav>
+
+      <!-- Action Group -->
+      <div class="header-actions">
+        <div class="status-pill">
+          <span class="status-dot"></span>
+          <span class="status-label">PROPOSED 2026</span>
+        </div>
+        <a href="#register" class="btn btn-primary btn-sm register-trigger">Register Interest</a>
+        <button class="mobile-menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Navigation -->
+    <div class="mobile-drawer" id="mobile-drawer">
+      <nav class="mobile-nav">
+        <ul class="mobile-nav-list">
+          <li><a href="#about" class="mobile-link">About</a></li>
+          <li><a href="#tracks" class="mobile-link">Tracks</a></li>
+          <li><a href="#schedule" class="mobile-link">Schedule</a></li>
+          <li><a href="#experiences" class="mobile-link">Experience</a></li>
+          <li><a href="#prizes" class="mobile-link">Prizes</a></li>
+          <li><a href="#faq" class="mobile-link">FAQ</a></li>
+          <li class="mobile-action-item">
+            <a href="#register" class="btn btn-primary btn-block register-trigger">Register Interest</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- SECTION 2: HERO EXPERIENCE -->
+    <section class="section-hero" id="hero">
+      <div class="container hero-layout">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="badge-icon">⚡</span>
+            <span class="badge-text">BRAC UNIVERSITY COMPUTER CLUB PRESENTS</span>
+          </div>
+
+          <h1 class="hero-headline">
+            BUCC NEXUS
+            <span class="headline-tagline">BUILD WHAT'S NEXT.</span>
+          </h1>
+
+          <p class="hero-description">
+            A proposed 48-hour student innovation hackathon uniting developers, designers, roboticists, and creative thinkers to converge, collaborate, and transform bold concepts into working prototypes.
+          </p>
+
+          <!-- Live Countdown & Highlights -->
+          <div class="hero-meta-row">
+            <div class="countdown-card">
+              <span class="meta-label">SPRINT DURATION</span>
+              <div class="countdown-timer" id="hero-countdown">
+                <div class="time-block"><span class="time-val" id="cd-hours">48</span><span class="time-unit">HOURS</span></div>
+                <span class="time-sep">:</span>
+                <div class="time-block"><span class="time-val" id="cd-mins">00</span><span class="time-unit">MINS</span></div>
+                <span class="time-sep">:</span>
+                <div class="time-block"><span class="time-val" id="cd-secs">00</span><span class="time-unit">SECS</span></div>
+              </div>
+            </div>
+
+            <div class="hero-venue-card">
+              <span class="meta-label">VENUE & FORMAT</span>
+              <div class="venue-info">
+                <strong>BRAC University Campus</strong>
+                <span>Merul Badda, Dhaka • Hybrid Model</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dual CTAs -->
+          <div class="hero-cta-group">
+            <a href="#register" class="btn btn-primary btn-lg register-trigger">
+              <span>Register Your Team</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="#tracks" class="btn btn-secondary btn-lg">
+              <span>Explore Tracks</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 9l-7 7-7-7"/></svg>
+            </a>
+          </div>
+
+          <div class="hero-note">
+            <span class="pulse-icon"></span>
+            <span>Proposed club initiative • Dates & parameters subject to department confirmation</span>
+          </div>
+        </div>
+
+        <div class="hero-visual-anchor">
+          <!-- Holographic 3D Nexus Video Portal -->
+          <div class="nexus-portal-container">
+            <div class="portal-bezel">
+              <div class="portal-scanline"></div>
+              <video id="portal-video" class="portal-video-element" autoplay loop muted playsinline preload="auto">
+                <source src="assets/videos/nexus-geometric-ring.mp4" type="video/mp4">
+              </video>
+              <div class="portal-overlay-ring ring-orange"></div>
+              <div class="portal-overlay-ring ring-cyan"></div>
+            </div>
+
+            <!-- Feed Selector Toolbar -->
+            <div class="portal-feed-toolbar">
+              <span class="feed-label">3D TELEMETRY FEED:</span>
+              <div class="feed-buttons">
+                <button class="feed-btn active" data-src="assets/videos/nexus-geometric-ring.mp4" data-bg="assets/videos/hero-energy-trails.mp4">
+                  <span class="dot"></span> Gateway
+                </button>
+                <button class="feed-btn" data-src="assets/videos/hero-energy-trails.mp4" data-bg="assets/videos/nexus-geometric-ring.mp4">
+                  <span class="dot"></span> Trails
+                </button>
+                <button class="feed-btn" data-src="assets/videos/network-nodes.mp4" data-bg="assets/videos/network-nodes.mp4">
+                  <span class="dot"></span> Neural
+                </button>
+                <button class="feed-btn" data-src="assets/videos/futuristic-tech.mp4" data-bg="assets/videos/futuristic-tech.mp4">
+                  <span class="dot"></span> Artifacts
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-scroll-indicator">
+        <a href="#metrics" aria-label="Scroll down">
+          <span class="mouse-icon"><span class="wheel"></span></span>
+          <span class="scroll-text">DISCOVER NEXUS</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- SECTION 3: KEY METRICS BANNER -->
+    <section class="section-metrics" id="metrics">
+      <div class="container">
+        <div class="metrics-grid">
+          <div class="metric-card">
+            <div class="metric-val text-gradient-orange">48<span class="unit">HRS</span></div>
+            <div class="metric-label">Continuous Innovation</div>
+            <p class="metric-sub">Non-stop sprint with round-the-clock lab access & mentorship</p>
+          </div>
+          <div class="metric-card">
+            <div class="metric-val text-gradient-cyan">4<span class="unit">TRACKS</span></div>
+            <div class="metric-label">Specialized Arenas</div>
+            <p class="metric-sub">From Agentic AI to Embedded Hardware & Web3 systems</p>
+          </div>
+          <div class="metric-card">
+            <div class="metric-val text-gradient-orange">50K+<span class="unit">BDT</span></div>
+            <div class="metric-label">Prize Pool & Grants</div>
+            <p class="metric-sub">Trophies, certificates, sponsor awards & seed support</p>
+          </div>
+          <div class="metric-card">
+            <div class="metric-val text-gradient-cyan">300+<span class="unit">HACKERS</span></div>
+            <div class="metric-label">BRACU Innovators</div>
+            <p class="metric-sub">Undergraduate builders converging across all departments</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: ABOUT BUCC NEXUS & CORE VALUES -->
+    <section class="section-about" id="about">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-eyebrow">ABOUT THE HACKATHON</span>
+          <h2 class="section-title">Where Ideas Converge Into Reality</h2>
+          <p class="section-lead">
+            BUCC NEXUS represents a collaborative crucible designed to bridge the gap between academic theory and high-impact technical execution.
+          </p>
+        </div>
+
+        <div class="values-grid">
+          <div class="value-card">
+            <div class="value-icon-box orange">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <h3 class="value-title">Community</h3>
+            <p class="value-desc">Uniting students from CSE, EEE, Architecture, and Business to forge interdisciplinary alliances that outlast the weekend.</p>
+          </div>
+
+          <div class="value-card">
+            <div class="value-icon-box cyan">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <h3 class="value-title">Creativity</h3>
+            <p class="value-desc">Encouraging radical experimentation with unconventional algorithms, hardware integrations, and novel human-computer interfaces.</p>
+          </div>
+
+          <div class="value-card">
+            <div class="value-icon-box orange">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+            </div>
+            <h3 class="value-title">Collaboration</h3>
+            <p class="value-desc">Pair programming, rapid prototyping, and direct feedback loops alongside industry mentors and university alumni.</p>
+          </div>
+
+          <div class="value-card">
+            <div class="value-icon-box cyan">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+            </div>
+            <h3 class="value-title">Growth</h3>
+            <p class="value-desc">Transforming hackathon prototypes into viable research papers, startup MVPs, and production-ready portfolio cornerstones.</p>
+          </div>
+        </div>
+
+        <!-- 3D Neural Nodes Convergence Showcase -->
+        <div class="video-feature-banner">
+          <div class="feature-video-wrapper">
+            <video class="feature-video-element" autoplay loop muted playsinline preload="auto">
+              <source src="assets/videos/network-nodes.mp4" type="video/mp4">
+            </video>
+            <div class="feature-video-overlay"></div>
+          </div>
+          <div class="feature-video-info">
+            <div class="feature-tag">3D NEURAL SIMULATION</div>
+            <h3>Converging Minds Across 48 Continuous Hours</h3>
+            <p>Every participant becomes an interconnected node in an expansive campus-wide innovation network. Mentors, APIs, and cross-departmental skill sets route real-time solutions to complex challenges.</p>
+            <div class="feature-meta">
+              <span>⚡ 300+ Active Nodes</span>
+              <span>•</span>
+              <span>🌐 50+ Mentorship Sessions</span>
+              <span>•</span>
+              <span>🔒 100% Student-Authored IP</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: FOUR INNOVATION TRACKS -->
+    <section class="section-tracks" id="tracks">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">INNOVATION TRACKS</span>
+          <h2 class="section-title">Choose Your Arena</h2>
+          <p class="section-lead">
+            Four specialized challenges engineered to address real-world technological and societal frontiers.
+          </p>
+        </div>
+
+        <div class="tracks-grid">
+          <!-- Track 1 -->
+          <div class="track-card">
+            <div class="track-badge">TRACK 01</div>
+            <div class="track-icon orange">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10H12V2z"/><path d="M12 2a10 10 0 0 1 10 10h-10V2z"/><circle cx="12" cy="12" r="3"/></svg>
+            </div>
+            <h3 class="track-title">AI & Data Science</h3>
+            <p class="track-desc">
+              Harness LLMs, autonomous agents, computer vision, and predictive analytics to solve pressing challenges in education, healthcare, and sustainable agriculture.
+            </p>
+            <div class="track-tags">
+              <span>Agentic Workflows</span>
+              <span>Computer Vision</span>
+              <span>NLP & RAG</span>
+              <span>Predictive Models</span>
+            </div>
+          </div>
+
+          <!-- Track 2 -->
+          <div class="track-card">
+            <div class="track-badge">TRACK 02</div>
+            <div class="track-icon cyan">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
+            <h3 class="track-title">Web & App Development</h3>
+            <p class="track-desc">
+              Build high-performance, accessible, and cinematic web and mobile systems. Emphasize responsive design, real-time distributed state, and clean architecture.
+            </p>
+            <div class="track-tags">
+              <span>Next.js / Flutter</span>
+              <span>Real-Time WebSockets</span>
+              <span>Distributed Databases</span>
+              <span>PWA / iOS / Android</span>
+            </div>
+          </div>
+
+          <!-- Track 3 -->
+          <div class="track-card">
+            <div class="track-badge">TRACK 03</div>
+            <div class="track-icon orange">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg>
+            </div>
+            <h3 class="track-title">Robotics & IoT</h3>
+            <p class="track-desc">
+              Bridge the physical and digital. Build intelligent embedded devices, telemetry systems, smart city infrastructure, and automated robotic systems.
+            </p>
+            <div class="track-tags">
+              <span>Microcontrollers / ESP32</span>
+              <span>Edge AI</span>
+              <span>Sensor Telemetry</span>
+              <span>Autonomous Systems</span>
+            </div>
+          </div>
+
+          <!-- Track 4 -->
+          <div class="track-card">
+            <div class="track-badge">TRACK 04</div>
+            <div class="track-icon cyan">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            </div>
+            <h3 class="track-title">Open Innovation</h3>
+            <p class="track-desc">
+              Defy conventional categories. Explore cybersecurity, decentralized protocols, creative computing, assistive technologies, and moonshot civic prototypes.
+            </p>
+            <div class="track-tags">
+              <span>Cybersecurity</span>
+              <span>Assistive Tech</span>
+              <span>Civic Infrastructure</span>
+              <span>Experimental WebGL</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: 48-HOUR SPRINT TIMELINE -->
+    <section class="section-schedule" id="schedule">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-eyebrow">THE 48-HOUR TIMELINE</span>
+          <h2 class="section-title">The Sprint Architecture</h2>
+          <p class="section-lead">
+            Every hour is engineered for rapid prototyping, mentorship milestones, and structured progress evaluation.
+          </p>
+        </div>
+
+        <!-- Schedule Day Tabs -->
+        <div class="schedule-tabs" role="tablist">
+          <button class="tab-btn active" role="tab" aria-selected="true" data-day="day1">
+            <span class="tab-day">DAY 01</span>
+            <span class="tab-title">Kickoff & Ideation</span>
+          </button>
+          <button class="tab-btn" role="tab" aria-selected="false" data-day="day2">
+            <span class="tab-day">DAY 02</span>
+            <span class="tab-title">Building & Mentorship</span>
+          </button>
+          <button class="tab-btn" role="tab" aria-selected="false" data-day="day3">
+            <span class="tab-day">DAY 03</span>
+            <span class="tab-title">Demos & Judging</span>
+          </button>
+        </div>
+
+        <!-- Tab Panels -->
+        <div class="schedule-panels">
+          <!-- Day 1 Panel -->
+          <div class="schedule-panel active" id="panel-day1" role="tabpanel">
+            <div class="timeline-stream">
+              <div class="timeline-row">
+                <div class="timeline-time">15:00 — 16:30</div>
+                <div class="timeline-dot orange"></div>
+                <div class="timeline-body">
+                  <h4>Participant Check-In & Team Kit Distribution</h4>
+                  <p>Badge pickup, workstation allocation in BRACU CSE laboratories, and network access setup.</p>
+                </div>
+              </div>
+              <div class="timeline-row">
+                <div class="timeline-time">17:00 — 18:00</div>
+                <div class="timeline-dot cyan"></div>
+                <div class="timeline-body">
+                  <h4>Opening Ceremony & Keynote Address</h4>
+                  <p>Welcome remarks by BUCC executive committee, faculty advisors, and track challenge briefing.</p>
+                </div>
+              </div>
+              <div class="timeline-row highlight">
+                <div class="timeline-time">18:00 SHARP</div>
+                <div class="timeline-dot orange pulse"></div>
+                <div class="timeline-body">
+                  <h4>Hacking Sprint Officially Begins</h4>
+                  <p>Countdown clock initiates. 48 continuous building hours start across all 4 innovation tracks.</p>
+                </div>
+              </div>
+              <div class="timeline-row">
+                <div class="timeline-time">20:00 — 21:30</div>
+                <div class="timeline-dot cyan"></div>
+                <div class="timeline-body">
+                  <h4>Technical Masterclass #1: Fast Prototyping Architectures</h4>
+                  <p>Optional technical session on rapid backend scaffolding, API integrations, and edge deployment.</p>
+                </div>
+              </div>
+              <div class="timeline-row">
+                <div class="timeline-time">23:00 — 00:00</div>
+                <div class="timeline-dot orange"></div>
+                <div class="timeline-body">
+                  <h4>Midnight Architecture Checkpoint</h4>
+                  <p>Teams register repository links and submit initial architectural milestone manifests.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Day 2 Panel -->
+          <div class="schedule-panel" id="panel-day2" role="tabpanel">
+            <div class="timeline-stream">
+              <div class="timeline-row">
+                <div class="timeline-time">09:00 — 10:30</div>
+                <div class="timeline-dot cyan"></div>
+                <div class="timeline-body">
+                  <h4>Morning Sync & Developer Fuel</h4>
+                  <p>Breakfast service and informal track progress check with student ambassadors.</p>
+                </div>
+              </div>
+              <div class="timeline-row highlight">
+                <div class="timeline-time">11:00 — 14:00</div>
+                <div class="timeline-dot orange pulse"></div>
+                <div class="timeline-body">
+                  <h4>Round 1: Dedicated Mentor Clinic</h4>
+                  <p>Industry leaders, senior software engineers, and BUCC alumni conduct 1-on-1 team code reviews.</p>
+                </div>
+              </div>
+              <div class="timeline-row">
+                <div class="timeline-time">16:00 — 17:30</div>
+                <div class="timeline-dot cyan"></div>
+                <div class="timeline-body">
+                  <h4>Technical Masterclass #2: Pitching & High-Impact Demos</h4>
+                  <p>Guidelines on crafting compelling 3-minute technical presentations and live demo failure resilience.</p>
+                </div>
+              </div>
+              <div class="timeline-row">
+                <div class="timeline-time">21:00 — 23:00</div>
+                <div class="timeline-dot orange"></div>
+                <div class="timeline-body">
+                  <h4>Round 2: Mid-Point Technical Evaluation</h4>
+                  <p>Verification of working codebases and progress milestones prior to the final overnight sprint.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Day 3 Panel -->
+          <div class="schedule-panel" id="panel-day3" role="tabpanel">
+            <div class="timeline-stream">
+              <div class="timeline-row">
+                <div class="timeline-time">12:00 — 14:00</div>
+                <div class="timeline-dot cyan"></div>
+                <div class="timeline-body">
+                  <h4>Code Freeze & Final Repository Submission</h4>
+                  <p>All commit pushes finalized, README submissions, video walkthroughs, and deployment URLs locked.</p>
+                </div>
+              </div>
+              <div class="timeline-row highlight">
+                <div class="timeline-time">14:30 — 17:00</div>
+                <div class="timeline-dot orange pulse"></div>
+                <div class="timeline-body">
+                  <h4>Live Project Demonstrations & Expo</h4>
+                  <p>Top qualifying teams present live working prototypes before the distinguished judging panel.</p>
+                </div>
+              </div>
+              <div class="timeline-row">
+                <div class="timeline-time">17:30 — 18:30</div>
+                <div class="timeline-dot cyan"></div>
+                <div class="timeline-body">
+                  <h4>Closing Fireside Chat: The Future of Computing in BD</h4>
+                  <p>Keynote conversation featuring prominent tech entrepreneurs and distinguished BRACU faculty.</p>
+                </div>
+              </div>
+              <div class="timeline-row">
+                <div class="timeline-time">19:00 — 20:30</div>
+                <div class="timeline-dot orange"></div>
+                <div class="timeline-body">
+                  <h4>Grand Awards Ceremony & Prize Distribution</h4>
+                  <p>Announcement of Champion, Runners-Up, Track Winners, and closing photo ceremony.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: SUPPORTING EXPERIENCES -->
+    <section class="section-experiences" id="experiences">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">BEYOND CODING</span>
+          <h2 class="section-title">The Complete Hackathon Experience</h2>
+          <p class="section-lead">
+            BUCC NEXUS is an ecosystem designed to accelerate your technical skills, expand your network, and showcase your capabilities.
+          </p>
+        </div>
+
+        <div class="experiences-grid">
+          <div class="experience-card">
+            <div class="exp-icon">🎙️</div>
+            <h3>Opening Keynote</h3>
+            <p>Inspiring talks from pioneering builders pushing the boundaries of AI, robotics, and distributed systems.</p>
+          </div>
+          <div class="experience-card">
+            <div class="exp-icon">⚙️</div>
+            <h3>Technical Masterclasses</h3>
+            <p>Hands-on sessions covering prompt engineering, low-latency APIs, and production deployment pipelines.</p>
+          </div>
+          <div class="experience-card">
+            <div class="exp-icon">🤝</div>
+            <h3>1-on-1 Mentor Sessions</h3>
+            <p>Direct guidance from industry experts and senior alumni who have scaled systems to millions of users.</p>
+          </div>
+          <div class="experience-card">
+            <div class="exp-icon">🚀</div>
+            <h3>48-Hour Building Sprint</h3>
+            <p>An uninterrupted, electrifying arena with high-speed internet, dedicated lab benches, and late-night sustenance.</p>
+          </div>
+          <div class="experience-card">
+            <div class="exp-icon">🖥️</div>
+            <h3>Live Demonstrations</h3>
+            <p>Real hardware and live-deployed web applications presented to faculty, peers, and industry judges.</p>
+          </div>
+          <div class="experience-card">
+            <div class="exp-icon">🔥</div>
+            <h3>Closing Fireside Chat</h3>
+            <p>An unfiltered discussion on career trajectories, venture building, and navigating the global tech landscape.</p>
+          </div>
+        </div>
+
+        <!-- 3D Hardware & Innovation Showcase -->
+        <div class="video-feature-banner tech-banner">
+          <div class="feature-video-info">
+            <div class="feature-tag cyan">RAPID HARDWARE & SOFTWARE FUSION</div>
+            <h3>From Conceptual Schematic to Physical Prototype</h3>
+            <p>BUCC NEXUS equips creators with dedicated prototyping depots, telemetry benches, and cloud compute clusters to manifest tangible, physical-digital breakthroughs.</p>
+            <div class="feature-meta">
+              <span>🤖 Microcontrollers & Edge TPU</span>
+              <span>•</span>
+              <span>⚡ Cloud Infrastructure Credits</span>
+              <span>•</span>
+              <span>🏆 Production Hardware Lab Access</span>
+            </div>
+          </div>
+          <div class="feature-video-wrapper">
+            <video class="feature-video-element" autoplay loop muted playsinline preload="auto">
+              <source src="assets/videos/futuristic-tech.mp4" type="video/mp4">
+            </video>
+            <div class="feature-video-overlay"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 8: CHALLENGE & JUDGING CRITERIA -->
+    <section class="section-challenge" id="challenge">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-eyebrow">EVALUATION FRAMEWORK</span>
+          <h2 class="section-title">How Projects Are Judged</h2>
+          <p class="section-lead">
+            Transparent, multi-dimensional assessment metrics focused on authentic engineering and practical viability.
+          </p>
+        </div>
+
+        <div class="criteria-grid">
+          <div class="criteria-card">
+            <div class="criteria-weight">30%</div>
+            <h3>Technical Excellence</h3>
+            <p>Complexity, architectural soundness, code quality, test coverage, and elegant handling of real-time or edge states.</p>
+          </div>
+          <div class="criteria-card">
+            <div class="criteria-weight">25%</div>
+            <h3>Innovation & Originality</h3>
+            <p>Uniqueness of the approach. Novel synthesis of existing tools or pioneering new paradigms rather than replicating tutorials.</p>
+          </div>
+          <div class="criteria-card">
+            <div class="criteria-weight">25%</div>
+            <h3>Real-World Impact</h3>
+            <p>Clarity of the problem statement and the measurable value the solution delivers to its target community or industry.</p>
+          </div>
+          <div class="criteria-card">
+            <div class="criteria-weight">20%</div>
+            <h3>Design & Polish</h3>
+            <p>User experience, typography, accessibility, responsive execution, and resilience of the live demonstration.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 9: PRIZES & REWARDS -->
+    <section class="section-prizes" id="prizes">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-eyebrow">PRIZES & RECOGNITION</span>
+          <h2 class="section-title">Celebrating Exceptional Builders</h2>
+          <p class="section-lead">
+            Total prize pool of 50,000+ BDT alongside prestigious trophies, certificate honors, and mentorship backing.
+          </p>
+        </div>
+
+        <div class="prizes-podium">
+          <!-- 1st Runner Up -->
+          <div class="prize-card podium-card rank-2">
+            <div class="rank-badge">2ND PLACE</div>
+            <div class="prize-trophy-icon">🥈</div>
+            <h3 class="prize-tier">First Runner Up</h3>
+            <div class="prize-amount">15,000 BDT</div>
+            <ul class="prize-perks">
+              <li>Runner-Up Trophy & Medals</li>
+              <li>Official Certificate of Merit</li>
+              <li>Exclusive BUCC Swag Packs</li>
+              <li>Fast-Track Technical Interviews</li>
+            </ul>
+          </div>
+
+          <!-- Champion -->
+          <div class="prize-card podium-card rank-1 featured">
+            <div class="champion-glow"></div>
+            <div class="rank-badge gold">CHAMPION</div>
+            <div class="prize-trophy-icon gold">🏆</div>
+            <h3 class="prize-tier">Overall Champion</h3>
+            <div class="prize-amount gold">25,000 BDT</div>
+            <ul class="prize-perks">
+              <li>Grand NEXUS Champion Trophy</li>
+              <li>Certificate of Grand Excellence</li>
+              <li>Premium Swag & Tech Hardware</li>
+              <li>Incubation & VC Pitch Mentorship</li>
+              <li>BUCC Hall of Fame Induction</li>
+            </ul>
+          </div>
+
+          <!-- 2nd Runner Up -->
+          <div class="prize-card podium-card rank-3">
+            <div class="rank-badge">3RD PLACE</div>
+            <div class="prize-trophy-icon">🥉</div>
+            <h3 class="prize-tier">Second Runner Up</h3>
+            <div class="prize-amount">10,000 BDT</div>
+            <ul class="prize-perks">
+              <li>Second Runner-Up Trophy</li>
+              <li>Official Certificate of Merit</li>
+              <li>BUCC Swag & Cloud Credits</li>
+              <li>Alumni Mentorship Access</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Special Category Awards -->
+        <div class="special-awards-row">
+          <div class="special-award-pill">
+            <span class="award-emoji">🌟</span>
+            <strong>Best Freshman Team</strong>
+            <span>Special Certificate & Swag</span>
+          </div>
+          <div class="special-award-pill">
+            <span class="award-emoji">⚡</span>
+            <strong>Best UI/UX Design</strong>
+            <span>Design Studio Goodies</span>
+          </div>
+          <div class="special-award-pill">
+            <span class="award-emoji">🤖</span>
+            <strong>Hardware Innovation</strong>
+            <span>Maker Component Kit</span>
+          </div>
+          <div class="special-award-pill">
+            <span class="award-emoji">🌍</span>
+            <strong>Most Impactful Civic Tech</strong>
+            <span>Sponsor Recognition</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 10: REGISTRATION & ELIGIBILITY CTA -->
+    <section class="section-register" id="register">
+      <div class="container">
+        <div class="register-glass-card">
+          <div class="register-header text-center">
+            <div class="bucc-mark-pill">
+              <img src="assets/bucc-logo.svg" alt="BUCC" width="20" height="20">
+              <span>BRAC UNIVERSITY COMPUTER CLUB</span>
+            </div>
+            <h2 class="register-title">Ready to Build What's Next?</h2>
+            <p class="register-desc">
+              Assemble your team of 2 to 4 undergraduate innovators. Register your interest below to receive priority access when applications open.
+            </p>
+          </div>
+
+          <div class="eligibility-box">
+            <h4>Eligibility Criteria:</h4>
+            <div class="eligibility-grid">
+              <div class="elig-item">
+                <span class="check">✓</span>
+                <span>Currently enrolled undergraduate student of BRAC University</span>
+              </div>
+              <div class="elig-item">
+                <span class="check">✓</span>
+                <span>Teams of 2 to 4 members (interdisciplinary teams strongly encouraged)</span>
+              </div>
+              <div class="elig-item">
+                <span class="check">✓</span>
+                <span>All code written during the official 48-hour sprint window</span>
+              </div>
+              <div class="elig-item">
+                <span class="check">✓</span>
+                <span>Open-source repository with working deployment or physical prototype</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Registration Form -->
+          <form class="register-form" id="nexus-register-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="reg-lead-name">Team Lead Full Name *</label>
+                <input type="text" id="reg-lead-name" placeholder="e.g. Taseen Ahsan" required>
+              </div>
+              <div class="form-group">
+                <label for="reg-lead-email">BRACU Student Email *</label>
+                <input type="email" id="reg-lead-email" placeholder="name@g.bracu.ac.bd" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="reg-team-name">Team Name *</label>
+                <input type="text" id="reg-team-name" placeholder="e.g. Nexus Architects" required>
+              </div>
+              <div class="form-group">
+                <label for="reg-track">Preferred Track *</label>
+                <select id="reg-track" required>
+                  <option value="" disabled selected>Select an Innovation Track</option>
+                  <option value="ai">Track 01: AI & Data Science</option>
+                  <option value="web">Track 02: Web & App Development</option>
+                  <option value="iot">Track 03: Robotics & IoT</option>
+                  <option value="open">Track 04: Open Innovation</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="reg-project-vision">Project Concept / Vision (1-2 sentences)</label>
+              <textarea id="reg-project-vision" rows="3" placeholder="Describe the problem your team is excited to solve..."></textarea>
+            </div>
+
+            <div class="form-submit-row">
+              <button type="submit" class="btn btn-primary btn-xl">
+                <span>Submit Priority Registration</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+              <div class="form-status" id="form-status"></div>
+            </div>
+
+            <p class="form-disclaimer">
+              Note: This is an interest registration for the proposed BUCC NEXUS hackathon. Official confirmation will be dispatched via official BRACU student email.
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 11: FREQUENTLY ASKED QUESTIONS -->
+    <section class="section-faq" id="faq">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-eyebrow">COMMON INQUIRIES</span>
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <p class="section-lead">
+            Everything you need to know about team formations, logistics, rules, and hardware support.
+          </p>
+        </div>
+
+        <div class="faq-accordion" id="faq-accordion">
+          <!-- Item 1 -->
+          <div class="faq-card">
+            <button class="faq-question" aria-expanded="false">
+              <span>What is BUCC NEXUS and who is organizing it?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                BUCC NEXUS is a proposed 48-hour student innovation hackathon conceptualized by the BRAC University Computer Club (BUCC), the largest and most active student computing organization at BRAC University. It brings together undergraduate developers, designers, and problem solvers to build functional prototypes across four specialized tracks.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="faq-card">
+            <button class="faq-question" aria-expanded="false">
+              <span>Can students from non-CSE departments participate?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Yes! Interdisciplinary teams are highly encouraged. Students from Electrical & Electronic Engineering (EEE), Architecture, Mathematics, Business, and Biotechnology bring vital perspectives in hardware design, interface usability, and business viability.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="faq-card">
+            <button class="faq-question" aria-expanded="false">
+              <span>What is the team size limit?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Teams must consist of 2 to 4 currently enrolled undergraduate BRAC University students. Individual solo applications will be placed into a team-formation mixer session prior to kickoff.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="faq-card">
+            <button class="faq-question" aria-expanded="false">
+              <span>Can we bring pre-written code or existing projects?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                No. All core application logic, database schemas, and hardware integrations must be authored during the official 48-hour hackathon window. You may utilize open-source libraries, publicly available APIs, pre-trained AI foundation models, and standard UI component kits (e.g. Tailwind, Radix).
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 5 -->
+          <div class="faq-card">
+            <button class="faq-question" aria-expanded="false">
+              <span>Will hardware components be provided for the Robotics & IoT track?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Teams are encouraged to bring their own microcontrollers (e.g., Arduino, ESP32, Raspberry Pi) and sensor modules. BUCC will maintain a backup hardware depot with common breadboards, jumpers, sensors, and power supplies for loan during the sprint.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 6 -->
+          <div class="faq-card">
+            <button class="faq-question" aria-expanded="false">
+              <span>Is there a registration fee?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Priority interest registration is completely free. Any nominal fee for lab security and swag kit subsidization will be announced upon official university approval.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-contact-box text-center">
+          <p>Have additional questions or seeking sponsorship partnerships?</p>
+          <a href="mailto:bucc@g.bracu.ac.bd" class="btn btn-secondary btn-sm">
+            <span>Contact BUCC Committee (bucc@g.bracu.ac.bd)</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- SECTION 12: OFFICIAL FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-top">
+        <div class="footer-brand-col">
+          <div class="footer-logos">
+            <img src="assets/bucc-logo.svg" alt="BUCC Crest" width="40" height="40">
+            <div class="footer-divider"></div>
+            <img src="assets/brac-university-logo.png" alt="BRAC University Crest" width="36" height="36">
+          </div>
+          <h3 class="footer-nexus-title">BUCC NEXUS</h3>
+          <p class="footer-tagline">BUILD WHAT'S NEXT.</p>
+          <p class="footer-org-desc">
+            An initiative by the BRAC University Computer Club under the Department of Computer Science and Engineering, BRAC University.
+          </p>
+        </div>
+
+        <div class="footer-links-col">
+          <h4>Event Navigation</h4>
+          <ul>
+            <li><a href="#about">About the Sprint</a></li>
+            <li><a href="#tracks">Innovation Tracks</a></li>
+            <li><a href="#schedule">Timeline & Schedule</a></li>
+            <li><a href="#prizes">Prizes & Grants</a></li>
+            <li><a href="#faq">Frequently Asked Questions</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-col">
+          <h4>BUCC Ecosystem</h4>
+          <ul>
+            <li><a href="https://www.bracucc.org/" target="_blank" rel="noopener noreferrer">Official BUCC Portal</a></li>
+            <li><a href="https://bitbattles.bracucc.org/" target="_blank" rel="noopener noreferrer">Bit Battles Archive</a></li>
+            <li><a href="https://www.bracu.ac.bd/academics/departments/computer-science-and-engineering" target="_blank" rel="noopener noreferrer">BRACU CSE Department</a></li>
+            <li><a href="mailto:bucc@g.bracu.ac.bd">Committee Inquiries</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-col">
+          <h4>Headquarters</h4>
+          <address class="footer-address">
+            BRAC University<br>
+            Kha 224, Merul Badda<br>
+            Dhaka-1212, Bangladesh<br>
+            Email: <a href="mailto:bucc@g.bracu.ac.bd">bucc@g.bracu.ac.bd</a>
+          </address>
+
+          <div class="social-links-row">
+            <a href="https://www.facebook.com/BRACUCC" target="_blank" rel="noopener noreferrer" aria-label="BUCC Facebook">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/company/bracucc/" target="_blank" rel="noopener noreferrer" aria-label="BUCC LinkedIn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="https://www.instagram.com/bracucc/" target="_blank" rel="noopener noreferrer" aria-label="BUCC Instagram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+            </a>
+            <a href="https://www.youtube.com/@bracucc" target="_blank" rel="noopener noreferrer" aria-label="BUCC YouTube">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><polygon points="10 15 15 12 10 9" fill="#080A0F"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright">
+          © 2026 BRAC University Computer Club (BUCC). All rights reserved.
+        </p>
+        <p class="disclaimer-text">
+          Proposed academic initiative • Concept designed for BUCC Hackathon Proposal • Not an official university announcement.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- App Scripts -->
+  <script src="three-scene.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

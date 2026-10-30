@@ -1,0 +1,464 @@
+- generic [active] [ref=f2e1]:
+  - banner [ref=f2e2]:
+    - generic [ref=f2e3]:
+      - link "BUCC NEXUS Home" [ref=f2e4] [cursor=pointer]:
+        - /url: "#hero"
+        - generic [ref=f2e5]:
+          - img "BUCC Crest Logo" [ref=f2e6]
+          - img "BRAC University" [ref=f2e8]
+        - generic [ref=f2e9]:
+          - generic [ref=f2e10]: BUCC NEXUS
+          - generic [ref=f2e11]: BRAC UNIVERSITY
+      - navigation "Main Navigation" [ref=f2e12]:
+        - list [ref=f2e13]:
+          - listitem [ref=f2e14]:
+            - link "About" [ref=f2e15] [cursor=pointer]:
+              - /url: "#about"
+          - listitem [ref=f2e16]:
+            - link "Tracks" [ref=f2e17] [cursor=pointer]:
+              - /url: "#tracks"
+          - listitem [ref=f2e18]:
+            - link "Timeline" [ref=f2e19] [cursor=pointer]:
+              - /url: "#schedule"
+          - listitem [ref=f2e20]:
+            - link "Experience" [ref=f2e21] [cursor=pointer]:
+              - /url: "#experiences"
+          - listitem [ref=f2e22]:
+            - link "Prizes" [ref=f2e23] [cursor=pointer]:
+              - /url: "#prizes"
+          - listitem [ref=f2e24]:
+            - link "FAQ" [ref=f2e25] [cursor=pointer]:
+              - /url: "#faq"
+      - generic [ref=f2e26]:
+        - generic [ref=f2e27]: PROPOSED 2026
+        - link "Register Interest" [ref=f2e30] [cursor=pointer]:
+          - /url: "#register"
+  - main [ref=f2e31]:
+    - generic [ref=f2e32]:
+      - generic [ref=f2e33]:
+        - generic [ref=f2e34]:
+          - generic [ref=f2e35]:
+            - generic [ref=f2e36]: ⚡
+            - generic [ref=f2e37]: BRAC UNIVERSITY COMPUTER CLUB PRESENTS
+          - heading "BUCC NEXUS BUILD WHAT'S NEXT." [level=1] [ref=f2e38]:
+            - text: BUCC NEXUS
+            - generic [ref=f2e39]: BUILD WHAT'S NEXT.
+          - paragraph [ref=f2e40]: A proposed 48-hour student innovation hackathon uniting developers, designers, roboticists, and creative thinkers to converge, collaborate, and transform bold concepts into working prototypes.
+          - generic [ref=f2e41]:
+            - generic [ref=f2e42]:
+              - generic [ref=f2e43]: SPRINT DURATION
+              - generic [ref=f2e44]:
+                - generic [ref=f2e45]:
+                  - generic [ref=f2e46]: "48"
+                  - generic [ref=f2e47]: HOURS
+                - generic [ref=f2e48]: ":"
+                - generic [ref=f2e49]:
+                  - generic [ref=f2e50]: "00"
+                  - generic [ref=f2e51]: MINS
+                - generic [ref=f2e52]: ":"
+                - generic [ref=f2e53]:
+                  - generic [ref=f2e54]: "00"
+                  - generic [ref=f2e55]: SECS
+            - generic [ref=f2e56]:
+              - generic [ref=f2e57]: VENUE & FORMAT
+              - generic [ref=f2e58]:
+                - strong [ref=f2e59]: BRAC University Campus
+                - generic [ref=f2e60]: Merul Badda, Dhaka • Hybrid Model
+          - generic [ref=f2e61]:
+            - link "Register Your Team" [ref=f2e62] [cursor=pointer]:
+              - /url: "#register"
+            - link "Explore Tracks" [ref=f2e66] [cursor=pointer]:
+              - /url: "#tracks"
+          - generic [ref=f2e70]: Proposed club initiative • Dates & parameters subject to department confirmation
+        - generic [ref=f2e77]:
+          - text: "3D TELEMETRY FEED:"
+          - generic [ref=f2e78]:
+            - button "Gateway" [ref=f2e79]
+            - button "Trails" [ref=f2e80]
+            - button "Neural" [ref=f2e81]
+            - button "Artifacts" [ref=f2e82]
+      - link "Scroll down" [ref=f2e84] [cursor=pointer]:
+        - /url: "#metrics"
+        - generic [ref=f2e87]: DISCOVER NEXUS
+    - generic [ref=f2e90]:
+      - generic [ref=f2e91]:
+        - generic [ref=f2e92]: 48HRS
+        - generic [ref=f2e93]: Continuous Innovation
+        - paragraph [ref=f2e94]: Non-stop sprint with round-the-clock lab access & mentorship
+      - generic [ref=f2e95]:
+        - generic [ref=f2e96]: 4TRACKS
+        - generic [ref=f2e97]: Specialized Arenas
+        - paragraph [ref=f2e98]: From Agentic AI to Embedded Hardware & Web3 systems
+      - generic [ref=f2e99]:
+        - generic [ref=f2e100]: 50K+BDT
+        - generic [ref=f2e101]: Prize Pool & Grants
+        - paragraph [ref=f2e102]: Trophies, certificates, sponsor awards & seed support
+      - generic [ref=f2e103]:
+        - generic [ref=f2e104]: 300+HACKERS
+        - generic [ref=f2e105]: BRACU Innovators
+        - paragraph [ref=f2e106]: Undergraduate builders converging across all departments
+    - generic [ref=f2e108]:
+      - generic [ref=f2e109]:
+        - generic [ref=f2e110]: ABOUT THE HACKATHON
+        - heading "Where Ideas Converge Into Reality" [level=2] [ref=f2e111]
+        - paragraph [ref=f2e112]: BUCC NEXUS represents a collaborative crucible designed to bridge the gap between academic theory and high-impact technical execution.
+      - generic [ref=f2e113]:
+        - generic [ref=f2e114]:
+          - heading "Community" [level=3] [ref=f2e121]
+          - paragraph [ref=f2e122]: Uniting students from CSE, EEE, Architecture, and Business to forge interdisciplinary alliances that outlast the weekend.
+        - generic [ref=f2e123]:
+          - heading "Creativity" [level=3] [ref=f2e127]
+          - paragraph [ref=f2e128]: Encouraging radical experimentation with unconventional algorithms, hardware integrations, and novel human-computer interfaces.
+        - generic [ref=f2e129]:
+          - heading "Collaboration" [level=3] [ref=f2e134]
+          - paragraph [ref=f2e135]: Pair programming, rapid prototyping, and direct feedback loops alongside industry mentors and university alumni.
+        - generic [ref=f2e136]:
+          - heading "Growth" [level=3] [ref=f2e140]
+          - paragraph [ref=f2e141]: Transforming hackathon prototypes into viable research papers, startup MVPs, and production-ready portfolio cornerstones.
+      - generic [ref=f2e145]:
+        - generic [ref=f2e146]: 3D NEURAL SIMULATION
+        - heading "Converging Minds Across 48 Continuous Hours" [level=3] [ref=f2e147]
+        - paragraph [ref=f2e148]: Every participant becomes an interconnected node in an expansive campus-wide innovation network. Mentors, APIs, and cross-departmental skill sets route real-time solutions to complex challenges.
+        - generic [ref=f2e149]: ⚡ 300+ Active Nodes • 🌐 50+ Mentorship Sessions • 🔒 100% Student-Authored IP
+    - generic [ref=f2e151]:
+      - generic [ref=f2e152]:
+        - generic [ref=f2e153]: INNOVATION TRACKS
+        - heading "Choose Your Arena" [level=2] [ref=f2e154]
+        - paragraph [ref=f2e155]: Four specialized challenges engineered to address real-world technological and societal frontiers.
+      - generic [ref=f2e156]:
+        - generic [ref=f2e157]:
+          - generic [ref=f2e158]: TRACK 01
+          - heading "AI & Data Science" [level=3] [ref=f2e164]
+          - paragraph [ref=f2e165]: Harness LLMs, autonomous agents, computer vision, and predictive analytics to solve pressing challenges in education, healthcare, and sustainable agriculture.
+          - generic [ref=f2e166]:
+            - generic [ref=f2e167]: Agentic Workflows
+            - generic [ref=f2e168]: Computer Vision
+            - generic [ref=f2e169]: NLP & RAG
+            - generic [ref=f2e170]: Predictive Models
+        - generic [ref=f2e171]:
+          - generic [ref=f2e172]: TRACK 02
+          - heading "Web & App Development" [level=3] [ref=f2e177]
+          - paragraph [ref=f2e178]: Build high-performance, accessible, and cinematic web and mobile systems. Emphasize responsive design, real-time distributed state, and clean architecture.
+          - generic [ref=f2e179]:
+            - generic [ref=f2e180]: Next.js / Flutter
+            - generic [ref=f2e181]: Real-Time WebSockets
+            - generic [ref=f2e182]: Distributed Databases
+            - generic [ref=f2e183]: PWA / iOS / Android
+        - generic [ref=f2e184]:
+          - generic [ref=f2e185]: TRACK 03
+          - heading "Robotics & IoT" [level=3] [ref=f2e190]
+          - paragraph [ref=f2e191]: Bridge the physical and digital. Build intelligent embedded devices, telemetry systems, smart city infrastructure, and automated robotic systems.
+          - generic [ref=f2e192]:
+            - generic [ref=f2e193]: Microcontrollers / ESP32
+            - generic [ref=f2e194]: Edge AI
+            - generic [ref=f2e195]: Sensor Telemetry
+            - generic [ref=f2e196]: Autonomous Systems
+        - generic [ref=f2e197]:
+          - generic [ref=f2e198]: TRACK 04
+          - heading "Open Innovation" [level=3] [ref=f2e203]
+          - paragraph [ref=f2e204]: Defy conventional categories. Explore cybersecurity, decentralized protocols, creative computing, assistive technologies, and moonshot civic prototypes.
+          - generic [ref=f2e205]:
+            - generic [ref=f2e206]: Cybersecurity
+            - generic [ref=f2e207]: Assistive Tech
+            - generic [ref=f2e208]: Civic Infrastructure
+            - generic [ref=f2e209]: Experimental WebGL
+    - generic [ref=f2e211]:
+      - generic [ref=f2e212]:
+        - generic [ref=f2e213]: THE 48-HOUR TIMELINE
+        - heading "The Sprint Architecture" [level=2] [ref=f2e214]
+        - paragraph [ref=f2e215]: Every hour is engineered for rapid prototyping, mentorship milestones, and structured progress evaluation.
+      - tablist [ref=f2e216]:
+        - tab "DAY 01 Kickoff & Ideation" [selected] [ref=f2e217] [cursor=pointer]:
+          - generic [ref=f2e218]: DAY 01
+          - generic [ref=f2e219]: Kickoff & Ideation
+        - tab "DAY 02 Building & Mentorship" [ref=f2e220] [cursor=pointer]:
+          - generic [ref=f2e221]: DAY 02
+          - generic [ref=f2e222]: Building & Mentorship
+        - tab "DAY 03 Demos & Judging" [ref=f2e223] [cursor=pointer]:
+          - generic [ref=f2e224]: DAY 03
+          - generic [ref=f2e225]: Demos & Judging
+      - tabpanel [ref=f2e227]:
+        - generic [ref=f2e228]:
+          - generic [ref=f2e229]:
+            - generic [ref=f2e230]: 15:00 — 16:30
+            - generic [ref=f2e232]:
+              - heading "Participant Check-In & Team Kit Distribution" [level=4] [ref=f2e233]
+              - paragraph [ref=f2e234]: Badge pickup, workstation allocation in BRACU CSE laboratories, and network access setup.
+          - generic [ref=f2e235]:
+            - generic [ref=f2e236]: 17:00 — 18:00
+            - generic [ref=f2e238]:
+              - heading "Opening Ceremony & Keynote Address" [level=4] [ref=f2e239]
+              - paragraph [ref=f2e240]: Welcome remarks by BUCC executive committee, faculty advisors, and track challenge briefing.
+          - generic [ref=f2e241]:
+            - generic [ref=f2e242]: 18:00 SHARP
+            - generic [ref=f2e244]:
+              - heading "Hacking Sprint Officially Begins" [level=4] [ref=f2e245]
+              - paragraph [ref=f2e246]: Countdown clock initiates. 48 continuous building hours start across all 4 innovation tracks.
+          - generic [ref=f2e247]:
+            - generic [ref=f2e248]: 20:00 — 21:30
+            - generic [ref=f2e250]:
+              - 'heading "Technical Masterclass #1: Fast Prototyping Architectures" [level=4] [ref=f2e251]'
+              - paragraph [ref=f2e252]: Optional technical session on rapid backend scaffolding, API integrations, and edge deployment.
+          - generic [ref=f2e253]:
+            - generic [ref=f2e254]: 23:00 — 00:00
+            - generic [ref=f2e256]:
+              - heading "Midnight Architecture Checkpoint" [level=4] [ref=f2e257]
+              - paragraph [ref=f2e258]: Teams register repository links and submit initial architectural milestone manifests.
+    - generic [ref=f2e260]:
+      - generic [ref=f2e261]:
+        - generic [ref=f2e262]: BEYOND CODING
+        - heading "The Complete Hackathon Experience" [level=2] [ref=f2e263]
+        - paragraph [ref=f2e264]: BUCC NEXUS is an ecosystem designed to accelerate your technical skills, expand your network, and showcase your capabilities.
+      - generic [ref=f2e265]:
+        - generic [ref=f2e266]:
+          - generic [ref=f2e267]: 🎙️
+          - heading "Opening Keynote" [level=3] [ref=f2e268]
+          - paragraph [ref=f2e269]: Inspiring talks from pioneering builders pushing the boundaries of AI, robotics, and distributed systems.
+        - generic [ref=f2e270]:
+          - generic [ref=f2e271]: ⚙️
+          - heading "Technical Masterclasses" [level=3] [ref=f2e272]
+          - paragraph [ref=f2e273]: Hands-on sessions covering prompt engineering, low-latency APIs, and production deployment pipelines.
+        - generic [ref=f2e274]:
+          - generic [ref=f2e275]: 🤝
+          - heading "1-on-1 Mentor Sessions" [level=3] [ref=f2e276]
+          - paragraph [ref=f2e277]: Direct guidance from industry experts and senior alumni who have scaled systems to millions of users.
+        - generic [ref=f2e278]:
+          - generic [ref=f2e279]: 🚀
+          - heading "48-Hour Building Sprint" [level=3] [ref=f2e280]
+          - paragraph [ref=f2e281]: An uninterrupted, electrifying arena with high-speed internet, dedicated lab benches, and late-night sustenance.
+        - generic [ref=f2e282]:
+          - generic [ref=f2e283]: 🖥️
+          - heading "Live Demonstrations" [level=3] [ref=f2e284]
+          - paragraph [ref=f2e285]: Real hardware and live-deployed web applications presented to faculty, peers, and industry judges.
+        - generic [ref=f2e286]:
+          - generic [ref=f2e287]: 🔥
+          - heading "Closing Fireside Chat" [level=3] [ref=f2e288]
+          - paragraph [ref=f2e289]: An unfiltered discussion on career trajectories, venture building, and navigating the global tech landscape.
+    - generic [ref=f2e291]:
+      - generic [ref=f2e292]:
+        - generic [ref=f2e293]: EVALUATION FRAMEWORK
+        - heading "How Projects Are Judged" [level=2] [ref=f2e294]
+        - paragraph [ref=f2e295]: Transparent, multi-dimensional assessment metrics focused on authentic engineering and practical viability.
+      - generic [ref=f2e296]:
+        - generic [ref=f2e297]:
+          - generic [ref=f2e298]: 30%
+          - heading "Technical Excellence" [level=3] [ref=f2e299]
+          - paragraph [ref=f2e300]: Complexity, architectural soundness, code quality, test coverage, and elegant handling of real-time or edge states.
+        - generic [ref=f2e301]:
+          - generic [ref=f2e302]: 25%
+          - heading "Innovation & Originality" [level=3] [ref=f2e303]
+          - paragraph [ref=f2e304]: Uniqueness of the approach. Novel synthesis of existing tools or pioneering new paradigms rather than replicating tutorials.
+        - generic [ref=f2e305]:
+          - generic [ref=f2e306]: 25%
+          - heading "Real-World Impact" [level=3] [ref=f2e307]
+          - paragraph [ref=f2e308]: Clarity of the problem statement and the measurable value the solution delivers to its target community or industry.
+        - generic [ref=f2e309]:
+          - generic [ref=f2e310]: 20%
+          - heading "Design & Polish" [level=3] [ref=f2e311]
+          - paragraph [ref=f2e312]: User experience, typography, accessibility, responsive execution, and resilience of the live demonstration.
+    - generic [ref=f2e314]:
+      - generic [ref=f2e315]:
+        - generic [ref=f2e316]: PRIZES & RECOGNITION
+        - heading "Celebrating Exceptional Builders" [level=2] [ref=f2e317]
+        - paragraph [ref=f2e318]: Total prize pool of 50,000+ BDT alongside prestigious trophies, certificate honors, and mentorship backing.
+      - generic [ref=f2e319]:
+        - generic [ref=f2e320]:
+          - generic [ref=f2e321]: 2ND PLACE
+          - generic [ref=f2e322]: 🥈
+          - heading "First Runner Up" [level=3] [ref=f2e323]
+          - generic [ref=f2e324]: 15,000 BDT
+          - list [ref=f2e325]:
+            - listitem [ref=f2e326]: • Runner-Up Trophy & Medals
+            - listitem [ref=f2e327]: • Official Certificate of Merit
+            - listitem [ref=f2e328]: • Exclusive BUCC Swag Packs
+            - listitem [ref=f2e329]: • Fast-Track Technical Interviews
+        - generic [ref=f2e330]:
+          - generic [ref=f2e332]: CHAMPION
+          - generic [ref=f2e333]: 🏆
+          - heading "Overall Champion" [level=3] [ref=f2e334]
+          - generic [ref=f2e335]: 25,000 BDT
+          - list [ref=f2e336]:
+            - listitem [ref=f2e337]: • Grand NEXUS Champion Trophy
+            - listitem [ref=f2e338]: • Certificate of Grand Excellence
+            - listitem [ref=f2e339]: • Premium Swag & Tech Hardware
+            - listitem [ref=f2e340]: • Incubation & VC Pitch Mentorship
+            - listitem [ref=f2e341]: • BUCC Hall of Fame Induction
+        - generic [ref=f2e342]:
+          - generic [ref=f2e343]: 3RD PLACE
+          - generic [ref=f2e344]: 🥉
+          - heading "Second Runner Up" [level=3] [ref=f2e345]
+          - generic [ref=f2e346]: 10,000 BDT
+          - list [ref=f2e347]:
+            - listitem [ref=f2e348]: • Second Runner-Up Trophy
+            - listitem [ref=f2e349]: • Official Certificate of Merit
+            - listitem [ref=f2e350]: • BUCC Swag & Cloud Credits
+            - listitem [ref=f2e351]: • Alumni Mentorship Access
+      - generic [ref=f2e352]:
+        - generic [ref=f2e353]:
+          - generic [ref=f2e354]: 🌟
+          - strong [ref=f2e355]: Best Freshman Team
+          - generic [ref=f2e356]: Special Certificate & Swag
+        - generic [ref=f2e357]:
+          - generic [ref=f2e358]: ⚡
+          - strong [ref=f2e359]: Best UI/UX Design
+          - generic [ref=f2e360]: Design Studio Goodies
+        - generic [ref=f2e361]:
+          - generic [ref=f2e362]: 🤖
+          - strong [ref=f2e363]: Hardware Innovation
+          - generic [ref=f2e364]: Maker Component Kit
+        - generic [ref=f2e365]:
+          - generic [ref=f2e366]: 🌍
+          - strong [ref=f2e367]: Most Impactful Civic Tech
+          - generic [ref=f2e368]: Sponsor Recognition
+    - generic [ref=f2e371]:
+      - generic [ref=f2e372]:
+        - generic [ref=f2e373]:
+          - img "BUCC" [ref=f2e374]
+          - generic [ref=f2e375]: BRAC UNIVERSITY COMPUTER CLUB
+        - heading "Ready to Build What's Next?" [level=2] [ref=f2e376]
+        - paragraph [ref=f2e377]: Assemble your team of 2 to 4 undergraduate innovators. Register your interest below to receive priority access when applications open.
+      - generic [ref=f2e378]:
+        - heading "Eligibility Criteria:" [level=4] [ref=f2e379]
+        - generic [ref=f2e380]:
+          - generic [ref=f2e381]:
+            - generic [ref=f2e382]: ✓
+            - generic [ref=f2e383]: Currently enrolled undergraduate student of BRAC University
+          - generic [ref=f2e384]:
+            - generic [ref=f2e385]: ✓
+            - generic [ref=f2e386]: Teams of 2 to 4 members (interdisciplinary teams strongly encouraged)
+          - generic [ref=f2e387]:
+            - generic [ref=f2e388]: ✓
+            - generic [ref=f2e389]: All code written during the official 48-hour sprint window
+          - generic [ref=f2e390]:
+            - generic [ref=f2e391]: ✓
+            - generic [ref=f2e392]: Open-source repository with working deployment or physical prototype
+      - generic [ref=f2e393]:
+        - generic [ref=f2e394]:
+          - generic [ref=f2e395]:
+            - generic [ref=f2e396]: Team Lead Full Name *
+            - textbox "Team Lead Full Name *" [ref=f2e397]:
+              - /placeholder: e.g. Taseen Ahsan
+          - generic [ref=f2e398]:
+            - generic [ref=f2e399]: BRACU Student Email *
+            - textbox "BRACU Student Email *" [ref=f2e400]:
+              - /placeholder: name@g.bracu.ac.bd
+        - generic [ref=f2e401]:
+          - generic [ref=f2e402]:
+            - generic [ref=f2e403]: Team Name *
+            - textbox "Team Name *" [ref=f2e404]:
+              - /placeholder: e.g. Nexus Architects
+          - generic [ref=f2e405]:
+            - generic [ref=f2e406]: Preferred Track *
+            - combobox "Preferred Track *" [ref=f2e407]:
+              - option "Select an Innovation Track" [disabled] [selected]
+              - 'option "Track 01: AI & Data Science"'
+              - 'option "Track 02: Web & App Development"'
+              - 'option "Track 03: Robotics & IoT"'
+              - 'option "Track 04: Open Innovation"'
+        - generic [ref=f2e408]:
+          - generic [ref=f2e409]: Project Concept / Vision (1-2 sentences)
+          - textbox "Project Concept / Vision (1-2 sentences)" [ref=f2e410]:
+            - /placeholder: Describe the problem your team is excited to solve...
+        - button "Submit Priority Registration" [ref=f2e412] [cursor=pointer]
+        - paragraph [ref=f2e416]: "Note: This is an interest registration for the proposed BUCC NEXUS hackathon. Official confirmation will be dispatched via official BRACU student email."
+    - generic [ref=f2e418]:
+      - generic [ref=f2e419]:
+        - generic [ref=f2e420]: COMMON INQUIRIES
+        - heading "Frequently Asked Questions" [level=2] [ref=f2e421]
+        - paragraph [ref=f2e422]: Everything you need to know about team formations, logistics, rules, and hardware support.
+      - generic [ref=f2e423]:
+        - generic [ref=f2e424]:
+          - button "What is BUCC NEXUS and who is organizing it? +" [ref=f2e425] [cursor=pointer]:
+            - generic [ref=f2e426]: What is BUCC NEXUS and who is organizing it?
+            - generic [ref=f2e427]: +
+          - paragraph [ref=f2e428]: BUCC NEXUS is a proposed 48-hour student innovation hackathon conceptualized by the BRAC University Computer Club (BUCC), the largest and most active student computing organization at BRAC University. It brings together undergraduate developers, designers, and problem solvers to build functional prototypes across four specialized tracks.
+        - generic [ref=f2e429]:
+          - button "Can students from non-CSE departments participate? +" [ref=f2e430] [cursor=pointer]:
+            - generic [ref=f2e431]: Can students from non-CSE departments participate?
+            - generic [ref=f2e432]: +
+          - paragraph [ref=f2e433]: Yes! Interdisciplinary teams are highly encouraged. Students from Electrical & Electronic Engineering (EEE), Architecture, Mathematics, Business, and Biotechnology bring vital perspectives in hardware design, interface usability, and business viability.
+        - generic [ref=f2e434]:
+          - button "What is the team size limit? +" [ref=f2e435] [cursor=pointer]:
+            - generic [ref=f2e436]: What is the team size limit?
+            - generic [ref=f2e437]: +
+          - paragraph [ref=f2e438]: Teams must consist of 2 to 4 currently enrolled undergraduate BRAC University students. Individual solo applications will be placed into a team-formation mixer session prior to kickoff.
+        - generic [ref=f2e439]:
+          - button "Can we bring pre-written code or existing projects? +" [ref=f2e440] [cursor=pointer]:
+            - generic [ref=f2e441]: Can we bring pre-written code or existing projects?
+            - generic [ref=f2e442]: +
+          - paragraph [ref=f2e443]: No. All core application logic, database schemas, and hardware integrations must be authored during the official 48-hour hackathon window. You may utilize open-source libraries, publicly available APIs, pre-trained AI foundation models, and standard UI component kits (e.g. Tailwind, Radix).
+        - generic [ref=f2e444]:
+          - button "Will hardware components be provided for the Robotics & IoT track? +" [ref=f2e445] [cursor=pointer]:
+            - generic [ref=f2e446]: Will hardware components be provided for the Robotics & IoT track?
+            - generic [ref=f2e447]: +
+          - paragraph [ref=f2e448]: Teams are encouraged to bring their own microcontrollers (e.g., Arduino, ESP32, Raspberry Pi) and sensor modules. BUCC will maintain a backup hardware depot with common breadboards, jumpers, sensors, and power supplies for loan during the sprint.
+        - generic [ref=f2e449]:
+          - button "Is there a registration fee? +" [ref=f2e450] [cursor=pointer]:
+            - generic [ref=f2e451]: Is there a registration fee?
+            - generic [ref=f2e452]: +
+          - paragraph [ref=f2e453]: Priority interest registration is completely free. Any nominal fee for lab security and swag kit subsidization will be announced upon official university approval.
+      - generic [ref=f2e454]:
+        - paragraph [ref=f2e455]: Have additional questions or seeking sponsorship partnerships?
+        - link "Contact BUCC Committee (bucc@g.bracu.ac.bd)" [ref=f2e456] [cursor=pointer]:
+          - /url: mailto:bucc@g.bracu.ac.bd
+  - contentinfo [ref=f2e458]:
+    - generic [ref=f2e459]:
+      - generic [ref=f2e460]:
+        - generic [ref=f2e461]:
+          - generic [ref=f2e462]:
+            - img "BUCC Crest" [ref=f2e463]
+            - img "BRAC University Crest" [ref=f2e465]
+          - heading "BUCC NEXUS" [level=3] [ref=f2e466]
+          - paragraph [ref=f2e467]: BUILD WHAT'S NEXT.
+          - paragraph [ref=f2e468]: An initiative by the BRAC University Computer Club under the Department of Computer Science and Engineering, BRAC University.
+        - generic [ref=f2e469]:
+          - heading "Event Navigation" [level=4] [ref=f2e470]
+          - list [ref=f2e471]:
+            - listitem [ref=f2e472]:
+              - link "About the Sprint" [ref=f2e473] [cursor=pointer]:
+                - /url: "#about"
+            - listitem [ref=f2e474]:
+              - link "Innovation Tracks" [ref=f2e475] [cursor=pointer]:
+                - /url: "#tracks"
+            - listitem [ref=f2e476]:
+              - link "Timeline & Schedule" [ref=f2e477] [cursor=pointer]:
+                - /url: "#schedule"
+            - listitem [ref=f2e478]:
+              - link "Prizes & Grants" [ref=f2e479] [cursor=pointer]:
+                - /url: "#prizes"
+            - listitem [ref=f2e480]:
+              - link "Frequently Asked Questions" [ref=f2e481] [cursor=pointer]:
+                - /url: "#faq"
+        - generic [ref=f2e482]:
+          - heading "BUCC Ecosystem" [level=4] [ref=f2e483]
+          - list [ref=f2e484]:
+            - listitem [ref=f2e485]:
+              - link "Official BUCC Portal" [ref=f2e486] [cursor=pointer]:
+                - /url: https://www.bracucc.org/
+            - listitem [ref=f2e487]:
+              - link "Bit Battles Archive" [ref=f2e488] [cursor=pointer]:
+                - /url: https://bitbattles.bracucc.org/
+            - listitem [ref=f2e489]:
+              - link "BRACU CSE Department" [ref=f2e490] [cursor=pointer]:
+                - /url: https://www.bracu.ac.bd/academics/departments/computer-science-and-engineering
+            - listitem [ref=f2e491]:
+              - link "Committee Inquiries" [ref=f2e492] [cursor=pointer]:
+                - /url: mailto:bucc@g.bracu.ac.bd
+        - generic [ref=f2e493]:
+          - heading "Headquarters" [level=4] [ref=f2e494]
+          - generic [ref=f2e495]:
+            - text: "BRAC University Kha 224, Merul Badda Dhaka-1212, Bangladesh Email:"
+            - link "bucc@g.bracu.ac.bd" [ref=f2e496] [cursor=pointer]:
+              - /url: mailto:bucc@g.bracu.ac.bd
+          - generic [ref=f2e497]:
+            - link "BUCC Facebook" [ref=f2e498] [cursor=pointer]:
+              - /url: https://www.facebook.com/BRACUCC
+            - link "BUCC LinkedIn" [ref=f2e501] [cursor=pointer]:
+              - /url: https://www.linkedin.com/company/bracucc/
+            - link "BUCC Instagram" [ref=f2e506] [cursor=pointer]:
+              - /url: https://www.instagram.com/bracucc/
+            - link "BUCC YouTube" [ref=f2e510] [cursor=pointer]:
+              - /url: https://www.youtube.com/@bracucc
+      - generic [ref=f2e514]:
+        - paragraph [ref=f2e515]: © 2026 BRAC University Computer Club (BUCC). All rights reserved.
+        - paragraph [ref=f2e516]: Proposed academic initiative • Concept designed for BUCC Hackathon Proposal • Not an official university announcement.
