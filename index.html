@@ -7,10 +7,10 @@
   <meta name="description" content="BUCC NEXUS is a 48-hour student innovation hackathon by BRAC University Computer Club uniting developers, designers, and engineers to build the future.">
   <link rel="icon" type="image/svg+xml" href="assets/bucc-logo.svg">
 
-  <!-- Google Fonts: Space Grotesk, Sora & JetBrains Mono -->
+  <!-- Google Fonts: Syne, Sora & JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Sora:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Sora:wght@300;400;500;600;700&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet">
 
   <!-- Three.js (CDN) -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
@@ -28,7 +28,6 @@
       <source src="assets/videos/network-nodes.mp4" type="video/mp4">
     </video>
     <canvas id="webgl-canvas"></canvas>
-    <div class="canvas-grid-overlay"></div>
     <div class="video-tint"></div>
   </div>
 
@@ -221,46 +220,50 @@
       </div>
     </section>
 
-    <!-- FRAMER-STYLE TECH ECOSYSTEM MARQUEE -->
-    <section class="section-tech-marquee" aria-label="Supported Technologies">
-      <div class="container marquee-header">
-        <span class="marquee-eyebrow">SUPPORTED TECH ECOSYSTEM & FRAMEWORKS</span>
-      </div>
-      <div class="marquee-scroller" data-animated="true">
-        <div class="marquee-inner">
-          <div class="marquee-chip"><span class="chip-icon">🔥</span><span class="chip-name">PyTorch 2.5</span><span class="chip-tag">AI/ML</span></div>
-          <div class="marquee-chip"><span class="chip-icon">⚡</span><span class="chip-name">Next.js 15</span><span class="chip-tag">Web</span></div>
-          <div class="marquee-chip"><span class="chip-icon">🌐</span><span class="chip-name">Three.js WebGL</span><span class="chip-tag">3D</span></div>
-          <div class="marquee-chip"><span class="chip-icon">🤖</span><span class="chip-name">ROS 2 Humble</span><span class="chip-tag">Robotics</span></div>
-          <div class="marquee-chip"><span class="chip-icon">🔌</span><span class="chip-name">ESP32-S3</span><span class="chip-tag">IoT/Edge</span></div>
-          <div class="marquee-chip"><span class="chip-icon">🧠</span><span class="chip-name">TensorFlow</span><span class="chip-tag">Neural</span></div>
-          <div class="marquee-chip"><span class="chip-icon">🐳</span><span class="chip-name">Docker</span><span class="chip-tag">DevOps</span></div>
-          <div class="marquee-chip"><span class="chip-icon">📱</span><span class="chip-name">Flutter 3</span><span class="chip-tag">Mobile</span></div>
-          <div class="marquee-chip"><span class="chip-icon">🐘</span><span class="chip-name">PostgreSQL</span><span class="chip-tag">Data</span></div>
-          <div class="marquee-chip"><span class="chip-icon">🎨</span><span class="chip-name">Tailwind CSS</span><span class="chip-tag">UI</span></div>
-          <div class="marquee-chip"><span class="chip-icon">🤗</span><span class="chip-name">Hugging Face</span><span class="chip-tag">LLMs</span></div>
-          <div class="marquee-chip"><span class="chip-icon">👁️</span><span class="chip-name">OpenCV</span><span class="chip-tag">Vision</span></div>
-          <div class="marquee-chip"><span class="chip-icon">🦀</span><span class="chip-name">Rust Core</span><span class="chip-tag">Systems</span></div>
-          <div class="marquee-chip"><span class="chip-icon">🚀</span><span class="chip-name">FastAPI</span><span class="chip-tag">Backend</span></div>
-          <div class="marquee-chip"><span class="chip-icon">⚡</span><span class="chip-name">Supabase</span><span class="chip-tag">Realtime</span></div>
-          <div class="marquee-chip"><span class="chip-icon">🎯</span><span class="chip-name">Figma UI/UX</span><span class="chip-tag">Design</span></div>
-          <!-- Cloned sequence for infinite loop -->
-          <div class="marquee-chip"><span class="chip-icon">🔥</span><span class="chip-name">PyTorch 2.5</span><span class="chip-tag">AI/ML</span></div>
-          <div class="marquee-chip"><span class="chip-icon">⚡</span><span class="chip-name">Next.js 15</span><span class="chip-tag">Web</span></div>
-          <div class="marquee-chip"><span class="chip-icon">🌐</span><span class="chip-name">Three.js WebGL</span><span class="chip-tag">3D</span></div>
-          <div class="marquee-chip"><span class="chip-icon">🤖</span><span class="chip-name">ROS 2 Humble</span><span class="chip-tag">Robotics</span></div>
-          <div class="marquee-chip"><span class="chip-icon">🔌</span><span class="chip-name">ESP32-S3</span><span class="chip-tag">IoT/Edge</span></div>
-          <div class="marquee-chip"><span class="chip-icon">🧠</span><span class="chip-name">TensorFlow</span><span class="chip-tag">Neural</span></div>
-          <div class="marquee-chip"><span class="chip-icon">🐳</span><span class="chip-name">Docker</span><span class="chip-tag">DevOps</span></div>
-          <div class="marquee-chip"><span class="chip-icon">📱</span><span class="chip-name">Flutter 3</span><span class="chip-tag">Mobile</span></div>
-          <div class="marquee-chip"><span class="chip-icon">🐘</span><span class="chip-name">PostgreSQL</span><span class="chip-tag">Data</span></div>
-          <div class="marquee-chip"><span class="chip-icon">🎨</span><span class="chip-name">Tailwind CSS</span><span class="chip-tag">UI</span></div>
-          <div class="marquee-chip"><span class="chip-icon">🤗</span><span class="chip-name">Hugging Face</span><span class="chip-tag">LLMs</span></div>
-          <div class="marquee-chip"><span class="chip-icon">👁️</span><span class="chip-name">OpenCV</span><span class="chip-tag">Vision</span></div>
-          <div class="marquee-chip"><span class="chip-icon">🦀</span><span class="chip-name">Rust Core</span><span class="chip-tag">Systems</span></div>
-          <div class="marquee-chip"><span class="chip-icon">🚀</span><span class="chip-name">FastAPI</span><span class="chip-tag">Backend</span></div>
-          <div class="marquee-chip"><span class="chip-icon">⚡</span><span class="chip-name">Supabase</span><span class="chip-tag">Realtime</span></div>
-          <div class="marquee-chip"><span class="chip-icon">🎯</span><span class="chip-name">Figma UI/UX</span><span class="chip-tag">Design</span></div>
+    <!-- TECH ECOSYSTEM & FRAMEWORK MATRIX -->
+    <section class="section-tech-ecosystem" id="ecosystem" aria-label="Supported Technologies">
+      <div class="container">
+        <div class="ecosystem-header text-center">
+          <h2 class="ecosystem-title">Supported Tech Ecosystem & Toolchains</h2>
+          <p class="ecosystem-subtitle">Build freely using industry-standard libraries, frameworks, hardware targets, and cloud platforms.</p>
+        </div>
+        <div class="ecosystem-grid">
+          <div class="ecosystem-column">
+            <h3 class="ecosystem-col-title">Machine Intelligence</h3>
+            <div class="ecosystem-chips">
+              <div class="tech-chip"><span class="chip-icon">🔥</span><span class="chip-name">PyTorch 2.5</span><span class="chip-tag">Deep Learning</span></div>
+              <div class="tech-chip"><span class="chip-icon">🧠</span><span class="chip-name">TensorFlow</span><span class="chip-tag">Neural Nets</span></div>
+              <div class="tech-chip"><span class="chip-icon">🤗</span><span class="chip-name">Hugging Face</span><span class="chip-tag">Transformers</span></div>
+              <div class="tech-chip"><span class="chip-icon">👁️</span><span class="chip-name">OpenCV</span><span class="chip-tag">Computer Vision</span></div>
+            </div>
+          </div>
+          <div class="ecosystem-column">
+            <h3 class="ecosystem-col-title">Web & 3D Interactive</h3>
+            <div class="ecosystem-chips">
+              <div class="tech-chip"><span class="chip-icon">⚡</span><span class="chip-name">Next.js 15</span><span class="chip-tag">Fullstack</span></div>
+              <div class="tech-chip"><span class="chip-icon">🌐</span><span class="chip-name">Three.js WebGL</span><span class="chip-tag">Cinematic 3D</span></div>
+              <div class="tech-chip"><span class="chip-icon">🎨</span><span class="chip-name">Tailwind CSS</span><span class="chip-tag">Design Systems</span></div>
+              <div class="tech-chip"><span class="chip-icon">⚡</span><span class="chip-name">Supabase</span><span class="chip-tag">Realtime / Auth</span></div>
+            </div>
+          </div>
+          <div class="ecosystem-column">
+            <h3 class="ecosystem-col-title">Embedded & Robotics</h3>
+            <div class="ecosystem-chips">
+              <div class="tech-chip"><span class="chip-icon">🤖</span><span class="chip-name">ROS 2 Humble</span><span class="chip-tag">Robotics OS</span></div>
+              <div class="tech-chip"><span class="chip-icon">🔌</span><span class="chip-name">ESP32-S3</span><span class="chip-tag">Edge Silicon</span></div>
+              <div class="tech-chip"><span class="chip-icon">🦀</span><span class="chip-name">Rust Core</span><span class="chip-tag">Embedded Safe</span></div>
+              <div class="tech-chip"><span class="chip-icon">📱</span><span class="chip-name">Flutter 3</span><span class="chip-tag">Cross-Platform</span></div>
+            </div>
+          </div>
+          <div class="ecosystem-column">
+            <h3 class="ecosystem-col-title">Systems & Infrastructure</h3>
+            <div class="ecosystem-chips">
+              <div class="tech-chip"><span class="chip-icon">🐳</span><span class="chip-name">Docker</span><span class="chip-tag">Containers</span></div>
+              <div class="tech-chip"><span class="chip-icon">🚀</span><span class="chip-name">FastAPI</span><span class="chip-tag">Async APIs</span></div>
+              <div class="tech-chip"><span class="chip-icon">🐘</span><span class="chip-name">PostgreSQL</span><span class="chip-tag">Relational DB</span></div>
+              <div class="tech-chip"><span class="chip-icon">🎯</span><span class="chip-name">Figma</span><span class="chip-tag">Product Design</span></div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -269,7 +272,6 @@
     <section class="section-about" id="about">
       <div class="container">
         <div class="section-header text-center">
-          <span class="section-eyebrow">ABOUT THE HACKATHON</span>
           <h2 class="section-title">Where Ideas Converge Into Reality</h2>
           <p class="section-lead">
             BUCC NEXUS represents a collaborative crucible designed to bridge the gap between academic theory and high-impact technical execution.
@@ -277,35 +279,43 @@
         </div>
 
         <div class="values-grid">
-          <div class="value-card">
-            <div class="value-icon-box orange">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          <div class="value-card spotlight-card">
+            <div class="value-header">
+              <span class="value-inline-icon orange">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </span>
+              <h3 class="value-title">Community</h3>
             </div>
-            <h3 class="value-title">Community</h3>
             <p class="value-desc">Uniting students from CSE, EEE, Architecture, and Business to forge interdisciplinary alliances that outlast the weekend.</p>
           </div>
 
-          <div class="value-card">
-            <div class="value-icon-box cyan">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <div class="value-card spotlight-card">
+            <div class="value-header">
+              <span class="value-inline-icon cyan">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </span>
+              <h3 class="value-title">Creativity</h3>
             </div>
-            <h3 class="value-title">Creativity</h3>
             <p class="value-desc">Encouraging radical experimentation with unconventional algorithms, hardware integrations, and novel human-computer interfaces.</p>
           </div>
 
-          <div class="value-card">
-            <div class="value-icon-box orange">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+          <div class="value-card spotlight-card">
+            <div class="value-header">
+              <span class="value-inline-icon orange">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+              </span>
+              <h3 class="value-title">Collaboration</h3>
             </div>
-            <h3 class="value-title">Collaboration</h3>
             <p class="value-desc">Pair programming, rapid prototyping, and direct feedback loops alongside industry mentors and university alumni.</p>
           </div>
 
-          <div class="value-card">
-            <div class="value-icon-box cyan">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+          <div class="value-card spotlight-card">
+            <div class="value-header">
+              <span class="value-inline-icon cyan">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+              </span>
+              <h3 class="value-title">Growth</h3>
             </div>
-            <h3 class="value-title">Growth</h3>
             <p class="value-desc">Transforming hackathon prototypes into viable research papers, startup MVPs, and production-ready portfolio cornerstones.</p>
           </div>
         </div>
@@ -319,7 +329,6 @@
             <div class="feature-video-overlay"></div>
           </div>
           <div class="feature-video-info">
-            <div class="feature-tag">3D NEURAL SIMULATION</div>
             <h3>Converging Minds Across 48 Continuous Hours</h3>
             <p>Every participant becomes an interconnected node in an expansive campus-wide innovation network. Mentors, APIs, and cross-departmental skill sets route real-time solutions to complex challenges.</p>
             <div class="feature-meta">
@@ -338,7 +347,6 @@
     <section class="section-tracks" id="tracks">
       <div class="container">
         <div class="section-header">
-          <span class="section-eyebrow">INNOVATION TRACKS</span>
           <h2 class="section-title">Choose Your Arena</h2>
           <p class="section-lead">
             Four specialized challenges engineered to address real-world technological and societal frontiers.
@@ -349,13 +357,14 @@
           <!-- Track 1 -->
           <div class="track-card spotlight-card active" data-track="ai" tabindex="0" role="button" aria-pressed="true">
             <div class="track-header-row">
-              <div class="track-badge">TRACK 01</div>
-              <span class="track-select-hint">Click to Inspect ↗</span>
+              <div class="track-title-group">
+                <span class="track-inline-icon orange">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10H12V2z"/><path d="M12 2a10 10 0 0 1 10 10h-10V2z"/><circle cx="12" cy="12" r="3"/></svg>
+                </span>
+                <h3 class="track-title">AI & Data Science</h3>
+              </div>
+              <span class="track-badge">TRACK 01</span>
             </div>
-            <div class="track-icon orange">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10H12V2z"/><path d="M12 2a10 10 0 0 1 10 10h-10V2z"/><circle cx="12" cy="12" r="3"/></svg>
-            </div>
-            <h3 class="track-title">AI & Data Science</h3>
             <p class="track-desc">
               Harness LLMs, autonomous agents, computer vision, and predictive analytics to solve pressing challenges in education, healthcare, and sustainable agriculture.
             </p>
@@ -370,13 +379,14 @@
           <!-- Track 2 -->
           <div class="track-card spotlight-card" data-track="web" tabindex="0" role="button" aria-pressed="false">
             <div class="track-header-row">
-              <div class="track-badge">TRACK 02</div>
-              <span class="track-select-hint">Click to Inspect ↗</span>
+              <div class="track-title-group">
+                <span class="track-inline-icon cyan">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                </span>
+                <h3 class="track-title">Web & App Development</h3>
+              </div>
+              <span class="track-badge">TRACK 02</span>
             </div>
-            <div class="track-icon cyan">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-            </div>
-            <h3 class="track-title">Web & App Development</h3>
             <p class="track-desc">
               Build high-performance, accessible, and cinematic web and mobile systems. Emphasize responsive design, real-time distributed state, and clean architecture.
             </p>
@@ -391,13 +401,14 @@
           <!-- Track 3 -->
           <div class="track-card spotlight-card" data-track="iot" tabindex="0" role="button" aria-pressed="false">
             <div class="track-header-row">
-              <div class="track-badge">TRACK 03</div>
-              <span class="track-select-hint">Click to Inspect ↗</span>
+              <div class="track-title-group">
+                <span class="track-inline-icon orange">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg>
+                </span>
+                <h3 class="track-title">Robotics & IoT</h3>
+              </div>
+              <span class="track-badge">TRACK 03</span>
             </div>
-            <div class="track-icon orange">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg>
-            </div>
-            <h3 class="track-title">Robotics & IoT</h3>
             <p class="track-desc">
               Bridge the physical and digital. Build intelligent embedded devices, telemetry systems, smart city infrastructure, and automated robotic systems.
             </p>
@@ -412,13 +423,14 @@
           <!-- Track 4 -->
           <div class="track-card spotlight-card" data-track="open" tabindex="0" role="button" aria-pressed="false">
             <div class="track-header-row">
-              <div class="track-badge">TRACK 04</div>
-              <span class="track-select-hint">Click to Inspect ↗</span>
+              <div class="track-title-group">
+                <span class="track-inline-icon cyan">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                </span>
+                <h3 class="track-title">Open Innovation</h3>
+              </div>
+              <span class="track-badge">TRACK 04</span>
             </div>
-            <div class="track-icon cyan">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-            </div>
-            <h3 class="track-title">Open Innovation</h3>
             <p class="track-desc">
               Defy conventional categories. Explore cybersecurity, decentralized protocols, creative computing, assistive technologies, and moonshot civic prototypes.
             </p>
@@ -453,8 +465,7 @@
             <div class="sandbox-grid">
               <!-- Left Column: Mission & Metrics -->
               <div class="sandbox-info-col">
-                <div class="sandbox-badge" id="sandbox-badge">TRACK 01 BLUEPRINT</div>
-                <h4 class="sandbox-heading" id="sandbox-heading">Autonomous Agentic Reasoning & Vision Pipeline</h4>
+                <h3 class="sandbox-heading" id="sandbox-heading">Autonomous Agentic Reasoning & Vision Pipeline</h3>
                 <p class="sandbox-summary" id="sandbox-summary">
                   Build multi-agent decision systems that synthesize multimodal inputs (sensors, video, satellite imagery, or user queries) into low-latency executable actions.
                 </p>
@@ -515,7 +526,6 @@
     <section class="section-schedule" id="schedule">
       <div class="container">
         <div class="section-header text-center">
-          <span class="section-eyebrow">THE 48-HOUR TIMELINE</span>
           <h2 class="section-title">The Sprint Architecture</h2>
           <p class="section-lead">
             Every hour is engineered for rapid prototyping, mentorship milestones, and structured progress evaluation.
@@ -547,7 +557,7 @@
                 <div class="timeline-time">15:00 — 16:30</div>
                 <div class="timeline-dot orange"></div>
                 <div class="timeline-body">
-                  <h4>Participant Check-In & Team Kit Distribution</h4>
+                  <h3>Participant Check-In & Team Kit Distribution</h3>
                   <p>Badge pickup, workstation allocation in BRACU CSE laboratories, and network access setup.</p>
                 </div>
               </div>
@@ -555,15 +565,15 @@
                 <div class="timeline-time">17:00 — 18:00</div>
                 <div class="timeline-dot cyan"></div>
                 <div class="timeline-body">
-                  <h4>Opening Ceremony & Keynote Address</h4>
+                  <h3>Opening Ceremony & Keynote Address</h3>
                   <p>Welcome remarks by BUCC executive committee, faculty advisors, and track challenge briefing.</p>
                 </div>
               </div>
               <div class="timeline-row highlight">
                 <div class="timeline-time">18:00 SHARP</div>
-                <div class="timeline-dot orange pulse"></div>
+                <div class="timeline-dot orange"></div>
                 <div class="timeline-body">
-                  <h4>Hacking Sprint Officially Begins</h4>
+                  <h3>Hacking Sprint Officially Begins</h3>
                   <p>Countdown clock initiates. 48 continuous building hours start across all 4 innovation tracks.</p>
                 </div>
               </div>
@@ -571,7 +581,7 @@
                 <div class="timeline-time">20:00 — 21:30</div>
                 <div class="timeline-dot cyan"></div>
                 <div class="timeline-body">
-                  <h4>Technical Masterclass #1: Fast Prototyping Architectures</h4>
+                  <h3>Technical Masterclass #1: Fast Prototyping Architectures</h3>
                   <p>Optional technical session on rapid backend scaffolding, API integrations, and edge deployment.</p>
                 </div>
               </div>
@@ -579,7 +589,7 @@
                 <div class="timeline-time">23:00 — 00:00</div>
                 <div class="timeline-dot orange"></div>
                 <div class="timeline-body">
-                  <h4>Midnight Architecture Checkpoint</h4>
+                  <h3>Midnight Architecture Checkpoint</h3>
                   <p>Teams register repository links and submit initial architectural milestone manifests.</p>
                 </div>
               </div>
@@ -593,15 +603,15 @@
                 <div class="timeline-time">09:00 — 10:30</div>
                 <div class="timeline-dot cyan"></div>
                 <div class="timeline-body">
-                  <h4>Morning Sync & Developer Fuel</h4>
+                  <h3>Morning Sync & Developer Fuel</h3>
                   <p>Breakfast service and informal track progress check with student ambassadors.</p>
                 </div>
               </div>
               <div class="timeline-row highlight">
                 <div class="timeline-time">11:00 — 14:00</div>
-                <div class="timeline-dot orange pulse"></div>
+                <div class="timeline-dot orange"></div>
                 <div class="timeline-body">
-                  <h4>Round 1: Dedicated Mentor Clinic</h4>
+                  <h3>Round 1: Dedicated Mentor Clinic</h3>
                   <p>Industry leaders, senior software engineers, and BUCC alumni conduct 1-on-1 team code reviews.</p>
                 </div>
               </div>
@@ -609,7 +619,7 @@
                 <div class="timeline-time">16:00 — 17:30</div>
                 <div class="timeline-dot cyan"></div>
                 <div class="timeline-body">
-                  <h4>Technical Masterclass #2: Pitching & High-Impact Demos</h4>
+                  <h3>Technical Masterclass #2: Pitching & High-Impact Demos</h3>
                   <p>Guidelines on crafting compelling 3-minute technical presentations and live demo failure resilience.</p>
                 </div>
               </div>
@@ -617,7 +627,7 @@
                 <div class="timeline-time">21:00 — 23:00</div>
                 <div class="timeline-dot orange"></div>
                 <div class="timeline-body">
-                  <h4>Round 2: Mid-Point Technical Evaluation</h4>
+                  <h3>Round 2: Mid-Point Technical Evaluation</h3>
                   <p>Verification of working codebases and progress milestones prior to the final overnight sprint.</p>
                 </div>
               </div>
@@ -631,15 +641,15 @@
                 <div class="timeline-time">12:00 — 14:00</div>
                 <div class="timeline-dot cyan"></div>
                 <div class="timeline-body">
-                  <h4>Code Freeze & Final Repository Submission</h4>
+                  <h3>Code Freeze & Final Repository Submission</h3>
                   <p>All commit pushes finalized, README submissions, video walkthroughs, and deployment URLs locked.</p>
                 </div>
               </div>
               <div class="timeline-row highlight">
                 <div class="timeline-time">14:30 — 17:00</div>
-                <div class="timeline-dot orange pulse"></div>
+                <div class="timeline-dot orange"></div>
                 <div class="timeline-body">
-                  <h4>Live Project Demonstrations & Expo</h4>
+                  <h3>Live Project Demonstrations & Expo</h3>
                   <p>Top qualifying teams present live working prototypes before the distinguished judging panel.</p>
                 </div>
               </div>
@@ -647,7 +657,7 @@
                 <div class="timeline-time">17:30 — 18:30</div>
                 <div class="timeline-dot cyan"></div>
                 <div class="timeline-body">
-                  <h4>Closing Fireside Chat: The Future of Computing in BD</h4>
+                  <h3>Closing Fireside Chat: The Future of Computing in BD</h3>
                   <p>Keynote conversation featuring prominent tech entrepreneurs and distinguished BRACU faculty.</p>
                 </div>
               </div>
@@ -655,7 +665,7 @@
                 <div class="timeline-time">19:00 — 20:30</div>
                 <div class="timeline-dot orange"></div>
                 <div class="timeline-body">
-                  <h4>Grand Awards Ceremony & Prize Distribution</h4>
+                  <h3>Grand Awards Ceremony & Prize Distribution</h3>
                   <p>Announcement of Champion, Runners-Up, Track Winners, and closing photo ceremony.</p>
                 </div>
               </div>
@@ -669,7 +679,6 @@
     <section class="section-experiences" id="experiences">
       <div class="container">
         <div class="section-header">
-          <span class="section-eyebrow">BEYOND CODING</span>
           <h2 class="section-title">The Complete Hackathon Experience</h2>
           <p class="section-lead">
             BUCC NEXUS is an ecosystem designed to accelerate your technical skills, expand your network, and showcase your capabilities.
@@ -712,7 +721,6 @@
         <!-- 3D Hardware & Innovation Showcase -->
         <div class="video-feature-banner tech-banner">
           <div class="feature-video-info">
-            <div class="feature-tag cyan">RAPID HARDWARE & SOFTWARE FUSION</div>
             <h3>From Conceptual Schematic to Physical Prototype</h3>
             <p>BUCC NEXUS equips creators with dedicated prototyping depots, telemetry benches, and cloud compute clusters to manifest tangible, physical-digital breakthroughs.</p>
             <div class="feature-meta">
@@ -737,7 +745,6 @@
     <section class="section-challenge" id="challenge">
       <div class="container">
         <div class="section-header text-center">
-          <span class="section-eyebrow">EVALUATION FRAMEWORK</span>
           <h2 class="section-title">How Projects Are Judged</h2>
           <p class="section-lead">
             Transparent, multi-dimensional assessment metrics focused on authentic engineering and practical viability.
@@ -773,7 +780,6 @@
     <section class="section-prizes" id="prizes">
       <div class="container">
         <div class="section-header text-center">
-          <span class="section-eyebrow">PRIZES & RECOGNITION</span>
           <h2 class="section-title">Celebrating Exceptional Builders</h2>
           <p class="section-lead">
             Total prize pool of 50,000+ BDT alongside prestigious trophies, certificate honors, and mentorship backing.
@@ -868,7 +874,7 @@
           </div>
 
           <div class="eligibility-box">
-            <h4>Eligibility Criteria:</h4>
+            <h3>Eligibility Criteria</h3>
             <div class="eligibility-grid">
               <div class="elig-item">
                 <span class="check">✓</span>
@@ -970,7 +976,6 @@
     <section class="section-faq" id="faq">
       <div class="container">
         <div class="section-header text-center">
-          <span class="section-eyebrow">COMMON INQUIRIES</span>
           <h2 class="section-title">Frequently Asked Questions</h2>
           <p class="section-lead">
             Everything you need to know about team formations, logistics, rules, and hardware support.
